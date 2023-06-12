@@ -1,0 +1,93 @@
+
+
+
+main {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+main h1 {
+    margin-top: 20px;
+    
+    /* H1 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 140%;
+    /* identical to box height, or 90px */
+    color: #000000;
+}
+
+main form {
+    margin-top: 80px;
+    margin-bottom: 137px;
+}
+
+main form label {
+    /* Date */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* identical to box height */
+
+    color: #000000;
+}
+
+main form div {
+    margin-bottom: 40px;
+}
+
+main form .submit {
+    box-sizing: border-box;
+    margin-top: 40px;
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    
+    
+    border: 2px solid #9B407A;
+    border-radius: 50px;
+
+    margin-left: 8px;
+
+    /* Button text */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    
+    /* identical to box height */
+    text-transform: uppercase;
+    
+    /* brand color */
+    color: #841844;
+
+    cursor: pointer;
+}
+
+main form .submit:hover {
+    /* brand color */
+    background: #841844;
+    border: 2px solid #9B407A;
+    border-radius: 50px;
+    /* white */
+    color: #FFFFFF;
+}
+
+.disable { 
+    display: none;
+}
+
+main form div p {
+    margin-top: 40px;
+    color: red;
+}

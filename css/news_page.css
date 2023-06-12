@@ -1,0 +1,158 @@
+
+
+main {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+main .news-path {
+    margin-top: 20px;
+    
+    /* Date */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* identical to box height */
+
+    color: #000000;
+}
+
+main .news-container {
+    margin-top: 22px;
+    margin-bottom: 137px;
+}
+
+main .news-container .news-date {
+    width: 118px;
+    height: 34px;
+    margin-top: 63px;
+    margin-bottom: 30px;
+    
+    /* light grey */
+    background: #ECF2F5;
+    border-radius: 20px;
+}
+
+main .news-container .news-date p {
+    padding: 6px 18px;
+
+    /* Date */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    /* identical to box height */
+
+    /* grey */
+    color: #6C6E7B;
+
+    text-align: center;
+    align-content: center;
+}
+
+main .news-content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .news-text-container {
+    width: 740px;
+    margin-right: 10px;
+}
+
+main .news-text-container .news-announce {
+    /* H2 */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+
+    /* brand color */
+    color: #841844;
+}
+
+main .news-text-container .news-text {
+    margin-top: 40px;
+    
+    /* text */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+
+    /* or 32px */
+
+    /* body text */
+    color: #000000;
+}
+
+main .news-button {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin-top: 40px;
+    
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    
+    width: 300px;
+    height: 54px;
+    
+    border: 2px solid #9B407A;
+    border-radius: 50px;
+}
+
+main .news-button p {
+    margin-left: 8px;
+
+    /* Button text */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    
+    /* identical to box height */
+    text-transform: uppercase;
+    
+    /* brand color */
+    color: #841844;
+}
+
+main .news-button:hover {
+    /* brand color */
+    background: #841844;
+    border: 2px solid #9B407A;
+    border-radius: 50px;
+}
+
+main .news-button:hover p {
+    /* white */
+    color: #FFFFFF;
+}
+
+main .arrow1, main .arrow2 {
+    transform: scale(-1, 1);
+}
+
+main .arrow2 {
+    display: none;
+}
+
+main .news-button:hover .arrow2 {
+    display: block;
+}
+
+main .news-button:hover .arrow1 {
+    display: none;
+}
+
+
