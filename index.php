@@ -14,7 +14,6 @@
         <?php
             require ('./models.php');
             require ('./settings.php');
-            $dlc = new PDO($DSN,$USER,$PASSWORD);
             $page = (isset($_GET['page'])) ? $_GET['page'] : 1; /* OR  $_GET['page'] ?? 1  */
             $res = NewsModel::GetItems(($page-1)*$LIMIT, $LIMIT);
             $number_of_news = NewsModel::GetCount();

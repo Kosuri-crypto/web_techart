@@ -1,9 +1,3 @@
-<?php
-    /* scss compiler : composer required */
-    //$scss_filename = 'mytest';
-?>
-
-
 <!DOCTYPE html>
 <html lang="ru">
     <head>

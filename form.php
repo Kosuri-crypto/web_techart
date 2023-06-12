@@ -14,12 +14,8 @@
             $message = $_POST['quest'] ?? '';
             $mail = $_POST['mail'] ?? '';
             if ($name != '' && $message != ''){
-                require ('./settings.php');
-                $dlc = new PDO($DSN,$USER,$PASSWORD);
-                $st = $dlc->prepare('INSERT INTO feedback(id,`name`,`message`) VALUES (0,?,?)');
-                $st->bindValue(1,$name,PDO::PARAM_STR);
-                $st->bindValue(2,$message,PDO::PARAM_STR);
-                $st->execute();
+                require ('./models.php');
+                NewsModel::InsertFeedback($name, $message);
                 mail($MAILBOX,'Задали вопрос',$name.': <'.$mail.'>: '.$message);
                 header('Location: /form.php');
                 die();

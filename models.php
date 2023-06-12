@@ -6,7 +6,8 @@
         private static function ConnectToDataBase()
         {
             require ('./settings.php');
-            return new PDO($DSN,$USER,$PASSWORD);
+            $dlc = new PDO($DSN,$USER,$PASSWORD);
+            return $dlc;
         }
 
         public static function GetCount()
@@ -35,6 +36,15 @@
             $st->execute();
             $res = $st->fetchAll();
             return $res;
+        }
+
+        public static function InsertFeedback($name, $message)
+        {
+            $dlc = self::ConnectToDataBase();
+            $st = $dlc->prepare('INSERT INTO feedback(id,`name`,`message`) VALUES (0,?,?)');
+            $st->bindValue(1,$name,PDO::PARAM_STR);
+            $st->bindValue(2,$message,PDO::PARAM_STR);
+            $st->execute();
         }
     }
 
