@@ -1,0 +1,33 @@
+
+$some_color1: red;
+$some_color2: gray;
+
+$some_familyfont: 'Open Sans';
+
+$some_classname: 'myclass';
+
+
+html {
+    margin: 0;
+    padding: 0;
+    & p {
+        font-family: #{$some_familyfont};
+    }
+    body {
+        margin-left: 200px;
+        margin-right: 200px;
+        .content1 {
+            background-color: $some_color1;
+            #{$some_classname} {
+                background-color: $some_color2;
+            }
+        }
+
+        .button {
+            width: min-content;
+            border: 2px solid #9B407A;
+            border-radius: 50px;
+        }
+    }
+}
+

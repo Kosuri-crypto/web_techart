@@ -1,0 +1,17 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+html p {
+  font-family: Open Sans;
+}
+html body {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+html body .content1 {
+  background-color: red;
+}
+html body .content1 myclass {
+  background-color: gray;
+}
