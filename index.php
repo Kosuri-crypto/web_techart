@@ -9,19 +9,15 @@
         <link rel="stylesheet" href="./builds/index.css">
         <link rel="stylesheet" href="./css/footer_style.css">
         <!-- Link Swiper's CSS -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
         <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
         <title>Галактический вестник</title>
         <?php
+            require ('./models.php');
             require ('./settings.php');
             $dlc = new PDO($DSN,$USER,$PASSWORD);
             $page = (isset($_GET['page'])) ? $_GET['page'] : 1; /* OR  $_GET['page'] ?? 1  */
-            $st = $dlc->prepare('SELECT id,title,announce,DATE_FORMAT(`date`,\'%d.%m.%Y\') as `date`,`image` FROM news ORDER BY `date` DESC LIMIT ?, ?');
-            $st->bindValue(1,($page-1)*$LIMIT,PDO::PARAM_INT);
-            $st->bindValue(2,$LIMIT,PDO::PARAM_INT);
-            $st->execute();
-            $res = $st->fetchAll();
-            $number_of_news = ($dlc->query('SELECT COUNT(*) as num FROM news')->fetch())['num'];
+            $res = NewsModel::GetItems(($page-1)*$LIMIT, $LIMIT);
+            $number_of_news = NewsModel::GetCount();
             $number_of_pages = ceil($number_of_news / $LIMIT);
         ?>
     </head>
@@ -35,15 +31,6 @@
 
         <!-- main content -->
         <main>
-            <!-- LEGACY >>> swiper
-            <div id="gallery-container">
-                <img src="./img/ban-image.png" alt="ban-image">
-                <div>
-                    <h2>Возвращение этнографа</h2>
-                    <p>Сегодня с Проксимы вернулась этнографическая экспедиция Джона Голдрама.</p>
-                </div>
-            </div>
-            -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <?php
@@ -99,7 +86,6 @@
         ?>
 
         <!-- Swiper JS -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
         <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
 
 

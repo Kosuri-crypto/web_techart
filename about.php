@@ -13,11 +13,6 @@
         <title>О нас</title>
         <link rel="stylesheet" href="./css/header_style.css">
         <link rel="stylesheet" href="./css/footer_style.css">
-        <!-- composer required:
-        <style><= require ('./style.php') ?></style>
-        -->
-        <!-- JavaScript -->
-        <!-- <script src="./js/script.js"></script> -->
     </head>
     <body>
         <!-- header -->

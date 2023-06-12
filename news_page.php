@@ -8,13 +8,9 @@
         <link rel="stylesheet" href="./css/footer_style.css">
         <link rel="stylesheet" href="./css/news_page.css">
         <?php  
-            require ('./settings.php');
-            $dlc = new PDO($DSN,$USER,$PASSWORD);
-            $st = $dlc->prepare('SELECT title,announce,DATE_FORMAT(`date`,\'%d.%m.%Y\') as `date`,content,`image` FROM news WHERE id=?');
-            $st->bindValue(1,$_GET['id'],PDO::PARAM_INT);
-            $st->execute();
-            $row = $st->fetch();
-            $title_news = $row['title']
+            require ('./models.php');
+            $row = NewsModel::GetItem($_GET['id']);
+            $title_news = $row['title'];
         ?>
         <title><?= $title_news ?></title>
     </head>
