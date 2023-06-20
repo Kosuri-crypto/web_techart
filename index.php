@@ -70,11 +70,13 @@
                     for ($i=1; $i <= $number_of_pages; $i++) { 
                         ?><a class=<?= ($page == $i) ? "nav-down-item-active" : "nav-down-item" ?> href="./index.php?page=<?= $i ?>"><p><?= $i ?></p></a><?php
                     }
+                    if ($page != $number_of_pages) {
+                        ?><a class="nav-down-item2" href="./index.php?page=<?= $page+1 ?>">
+                            <img class="arrow1" src="./img/arrow_1.png">
+                            <img class="arrow2" src="./img/arrow_2.png">
+                        </a><?php
+                    }
                 ?>
-                <a class="nav-down-item2" href="./index.php?page=<?= ($page == $number_of_pages) ? 1 : $page+1 ?>">
-                    <img class="arrow1" src="./img/arrow_1.png">
-                    <img class="arrow2" src="./img/arrow_2.png">
-                </a>
             </div>
         </main>
 
