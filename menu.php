@@ -1,15 +1,15 @@
 <?php
     $menu = [
         'main' => [
-            'url' => './',
+            'url' => '/news/',
             'title' => 'Главная',
         ],
         'about' => [
-            'url' => './about.php',
+            'url' => '/about.php',
             'title' => 'О нас',
         ],
         'request' => [
-            'url' => './form.php',
+            'url' => '/form.php',
             'title' => 'Задать вопрос'
         ]
     ];

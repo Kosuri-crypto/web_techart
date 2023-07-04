@@ -68,6 +68,7 @@ prom.then(
 //console.log(prom);
 //console.log('some text');
 
+/*
 const res = fetch('./test.php',{
     method: 'POST',
     body: 'some text in lowercase',
@@ -82,5 +83,6 @@ res.then(
         );
     }
 );
+*/
 
 //console.log(res);
