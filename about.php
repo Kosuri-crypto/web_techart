@@ -12,7 +12,7 @@
         <!-- header -->
         <?php
             $title = 'О нас';
-            require ('./Views/header.php');
+            require ('./tmp/header.php');
         ?>
 
         <!-- main / news -->
@@ -113,7 +113,7 @@
 
         <!-- footer -->
         <?php
-            require ('./Views/footer.php');
+            require ('./tmp/footer.php');
         ?>
     </body>
 </html>

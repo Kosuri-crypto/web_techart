@@ -20,4 +20,4 @@ $titleView = $title;
 $styleView = 'request';
 $contentView = 'formPageView.php';
 
-require ('./Views/templateView.php');
+require ('./tmp/templateView.php');

@@ -12,17 +12,17 @@
     <body>
         <!-- header -->
         <?php
-            require ('./Views/header.php');
+            require ('./tmp/header.php');
         ?>
 
         <!-- main -->
         <?php
-            require ('./Views/' . $contentView);
+            require ('./tmp/' . $contentView);
         ?>
 
         <!-- footer -->
         <?php
-            require ('./Views/footer.php');
+            require ('./tmp/footer.php');
         ?>
     </body>
 </html>
